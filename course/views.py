@@ -68,7 +68,7 @@ def course_detail(request, pk):
     :return:
     """
     try:
-        course = Course.objects.get(pk=pk)
+        course = Course.objects.get(id=pk)
     except Course.DoesNotExist:
         return Response(data={"msg": "没有此课程信息"}, status=status.HTTP_404_NOT_FOUND)
     else:
